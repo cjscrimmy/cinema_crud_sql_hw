@@ -162,8 +162,8 @@ INSERT INTO movies (title, year, show_time) VALUES ('Black Panther', 2018, '21:0
 -- (18 rows)
 
 -- 6.  We forgot one of the main characters! Add Bart Simpson to the 'people' table
-INSERT INTO people (name) VALUES ('Bart Simpson');
-SELECT name FROM people;
+-- INSERT INTO people (name) VALUES ('Bart Simpson');
+-- SELECT name FROM people;
 
 --result
 --    name         
@@ -188,6 +188,27 @@ SELECT name FROM people;
 -- (17 rows)
 
 -- 7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
+DELETE FROM people WHERE name = 'Eric Cartman';
+SELECT name FROM people;
 
+--result
+--  name         
+-- ----------------------
+--  Homer Simpson
+--  Marge Simpson
+--  Lisa Simpson
+--  Maggie Simpson
+--  Patty Bouvier
+--  Selma Bouvier
+--  Kent Brockman
+--  Ned Flanders
+--  Barney Gumble
+--  Itchy
+--  Scratchy
+--  Crusty the Clown
+--  Montgomery Burns
+--  Mayor Joe Quimby
+--  Groundskeeper Willie
+-- (15 rows)
 -- 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
 -- 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
