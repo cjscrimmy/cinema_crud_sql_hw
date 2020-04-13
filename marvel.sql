@@ -212,8 +212,8 @@ INSERT INTO movies (title, year, show_time) VALUES ('Black Panther', 2018, '21:0
 -- (15 rows)
 
 -- 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
-INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
-SELECT * FROM movies;
+-- INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
+-- SELECT * FROM movies;
 
 --result
 --  id |                title                | year | show_time 
@@ -241,3 +241,20 @@ SELECT * FROM movies;
 -- (20 rows)
 
 -- 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
+SELECT (title, show_time) FROM movies WHERE title = 'Iron Man 2';
+
+--result 
+--   row          
+-- ----------------------
+--  ("Iron Man 2",18:45)
+-- (1 row)
+
+UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';
+SELECT (title, show_time) FROM movies WHERE title LIKE 'Iron %';
+
+--      row          
+-- ----------------------
+--  ("Iron Man",17:00)
+--  ("Iron Man 2",18:45)
+--  ("Iron Man 3",20:45)
+-- (3 rows)
