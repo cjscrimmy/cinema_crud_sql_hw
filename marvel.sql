@@ -126,7 +126,7 @@ INSERT INTO movies (title, year, show_time) VALUES ('Black Panther', 2018, '21:0
 --  13 | Krusty The Clown
 
 -- 4.  Return ONLY Homer Simpson's name from the 'people' table.
-SELECT name FROM people WHERE name = 'Homer Simpson';
+-- SELECT name FROM people WHERE name = 'Homer Simpson';
 
 --result 
 -- name      
@@ -135,7 +135,59 @@ SELECT name FROM people WHERE name = 'Homer Simpson';
 -- (1 row)
 
 -- 5.  The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+-- DELETE FROM movies WHERE title = 'Batman Begins';
+-- SELECT title FROM movies;
+
+--result
+-- title                
+-- -------------------------------------
+--  Iron Man
+--  The Incredible Hulk
+--  Iron Man 2
+--  Thor
+--  Captain America: The First Avenger
+--  Avengers Assemble
+--  Iron Man 3
+--  Thor: The Dark World
+--  Captain America: The Winter Soldier
+--  Guardians of the Galaxy
+--  Avengers: Age of Ultron
+--  Ant-Man
+--  Captain America: Civil War
+--  Doctor Strange
+--  Guardians of the Galaxy 2
+--  Spider-Man: Homecoming
+--  Thor: Ragnarok
+--  Black Panther
+-- (18 rows)
+
 -- 6.  We forgot one of the main characters! Add Bart Simpson to the 'people' table
+INSERT INTO people (name) VALUES ('Bart Simpson');
+SELECT name FROM people;
+
+--result
+--    name         
+-- ----------------------
+--  Homer Simpson
+--  Marge Simpson
+--  Lisa Simpson
+--  Maggie Simpson
+--  Patty Bouvier
+--  Selma Bouvier
+--  Kent Brockman
+--  Ned Flanders
+--  Barney Gumble
+--  Itchy
+--  Eric Cartman
+--  Scratchy
+--  Crusty the Clown
+--  Montgomery Burns
+--  Mayor Joe Quimby
+--  Groundskeeper Willie
+--  Bart Simpson
+-- (17 rows)
+
 -- 7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
+
 -- 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
 -- 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
